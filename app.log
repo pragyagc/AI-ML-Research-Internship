@@ -1,0 +1,7 @@
+2025-09-24 18:22:22,653 - DEBUG - This is a debug message
+2025-09-24 18:22:22,654 - INFO - This is an info message
+2025-09-24 18:22:22,654 - WARNING - This is a warning message
+2025-09-24 18:22:22,654 - ERROR - This is an error message
+2025-09-24 18:22:22,654 - CRITICAL - This is a critical message
+2025-09-24 18:26:51,398 - my_app - WARNING - This goes to file and console
+2025-09-24 18:26:51,398 - my_app - ERROR - This goes to file and console
