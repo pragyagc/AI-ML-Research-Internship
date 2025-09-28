@@ -45,3 +45,35 @@ a = {1, 2}
 b = {3, 4}
 pairs = {(x, y) for x in a for y in b}
 print(pairs)  
+
+
+
+#generator
+def simple_gen():
+    yield 1
+    yield 2
+    yield 3
+
+gen = simple_gen()
+print(next(gen)) 
+print(next(gen))  
+print(next(gen))  
+
+
+
+
+#generator with a loop
+def count_up_to(n):
+    i = 1
+    while i <= n:
+        yield i
+        i += 1
+
+gen = count_up_to(5)
+print(list(gen))  
+
+
+
+#generator expresiion
+gen = (x**2 for x in range(5))
+print(list(gen)) 
