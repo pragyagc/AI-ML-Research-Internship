@@ -33,3 +33,31 @@ print(evens)
 pairs = [(1, 5), (2, 2), (3, 8)]
 sorted_pairs = sorted(pairs, key=lambda x: x[1])
 print(sorted_pairs)
+
+
+
+
+
+
+
+
+#closure
+def outer_function(msg):
+    def inner_function():
+        print("Message:", msg)  
+    return inner_function
+
+closure = outer_function("Hello Closure!")
+closure()   
+
+
+def multiplier(factor):
+    def multiply_by(n):
+        return n * factor
+    return multiply_by
+
+times2 = multiplier(2)
+times3 = multiplier(3)
+
+print(times2(5))
+print(times3(5)) 
