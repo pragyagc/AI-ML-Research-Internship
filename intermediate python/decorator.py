@@ -12,3 +12,11 @@ def say_hello():
 #decorator working
 decorator1=decorator(say_hello)
 decorator1()
+
+
+# cleaner approach than above code
+# @decorator
+# def say_hello():
+#     print("hello")
+
+# say_hello()
