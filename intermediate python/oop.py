@@ -69,7 +69,7 @@ print(Calculator.add(5, 3))
 #encapsulation
 
 class BankAccount:
-   def __init_self(self,owner,balance):
+   def __init__(self,owner,balance):
       self.owner=owner
       self.__balance=balance  #private
 
@@ -77,7 +77,7 @@ class BankAccount:
    def deposit(self,amount):
     self.__balance += amount
 
-    def show_balance(self):
+   def show_balance(self):
       print(f"Balance: Rs. {self.__balance}")
 
 acc = BankAccount("Pragya", 5000)
