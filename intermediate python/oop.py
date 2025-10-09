@@ -42,6 +42,7 @@ print(s1.school_name)
 
 
 #methos in classes
+
 class Calculator:
     def __init__(self, number):
         self.number = number
@@ -61,3 +62,24 @@ c = Calculator(4)
 print(c.square())           
 Calculator.greet()          # class method call
 print(Calculator.add(5, 3)) 
+
+
+
+
+#encapsulation
+
+class BankAccount:
+   def __init_self(self,owner,balance):
+      self.owner=owner
+      self.__balance=balance  #private
+
+
+   def deposit(self,amount):
+    self.__balance += amount
+
+    def show_balance(self):
+      print(f"Balance: Rs. {self.__balance}")
+
+acc = BankAccount("Pragya", 5000)
+acc.deposit(1000)
+acc.show_balance() 
