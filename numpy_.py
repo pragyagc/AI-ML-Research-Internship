@@ -55,3 +55,33 @@ mat = np.array([[1, 2, 3], [4, 5, 6], [7, 8, 9]])
 print(mat[0, 1])     # 2
 print(mat[:, 1])     # All rows, column 1 → [2 5 8]
 print(mat[1, :])     # Row 1 → [4 5 6]
+
+
+arr = np.arange(1, 7)
+print(arr.reshape(2, 3))   # 2 rows, 3 columns
+print(arr.reshape(3, 2))
+print(arr.flatten())       # 1D version of array
+
+#random numbers
+np.random.rand(3)        # 3 random numbers (0–1)
+np.random.randint(1, 10, 5)  # 5 random integers (1–9)
+np.random.randn(2, 3)    # 2x3 matrix from normal distribution
+
+
+
+
+temps = np.array([22.1, 23.4, 21.8, 20.5, 24.2])
+print("Average Temperature:", np.mean(temps))
+print("Max Temp:", np.max(temps))
+print("Min Temp:", np.min(temps))
+
+
+#matrix operations
+A = np.array([[1, 2], [3, 4]])
+B = np.array([[5, 6], [7, 8]])
+
+print(A + B)        # Element-wise addition
+print(A @ B)        # Matrix multiplication
+print(np.dot(A, B)) # Same as above
+print(np.transpose(A))  # Transpose
+print(np.linalg.inv(A)) # Inverse (if square)
