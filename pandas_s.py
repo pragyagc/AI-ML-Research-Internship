@@ -17,3 +17,35 @@ data={
 }
 df=pd.DataFrame(data)
 print(df)
+
+
+#reading from a csv file
+df = pd.read_csv("data.csv")
+print(df)
+
+
+#writing to a csv file
+df.to_csv("output.csv",index=False)
+print(df)
+#to a existing file
+
+import pandas as pd
+
+# Example DataFrame
+df = pd.DataFrame({
+    'Name': ['Alice', 'Bob'],
+    'Age': [25, 30]
+})
+
+# Overwrite the file
+df.to_csv('data.csv', index=False, mode='w')
+import pandas as pd
+
+#  DataFrame to append
+new_data = pd.DataFrame({
+    'Name': ['Charlie', 'David'],
+    'Age': [35, 40]
+})
+
+# Append without header
+new_data.to_csv('data.csv', index=False, mode='a', header=False)
