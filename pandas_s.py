@@ -49,3 +49,34 @@ new_data = pd.DataFrame({
 
 # Append without header
 new_data.to_csv('data.csv', index=False, mode='a', header=False)
+
+
+
+data = {
+    "Name": ["Alice", "Bob", "Charlie"],
+    "Age": [25, 30, 35],
+    "City": ["Kathmandu", "Pokhara", "Lalitpur"]
+}
+
+df = pd.DataFrame(data)
+
+ 
+print(df.head() )       # First 5 rows
+print(df.tail(2)  )     # Last 2 rows
+# df.shape         # (rows, columns)
+# df.columns       # Column names
+# df.info()        # Column types and non-null count
+# df.describe()    # Statistics summary
+
+
+#filtering data
+filtered_df=df[df["Age"] > 25] 
+print(filtered_df)             # Filter rows
+df[df["City"] == "Pokhara"]
+
+
+#adding and removing columns
+df["Country"] = "Nepal"           # Add column
+df["Age+10"] = df["Age"] + 10 #add a another column
+#df.drop("Age+10", axis=1, inplace=True)  # Remove column
+print(df)
