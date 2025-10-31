@@ -4,35 +4,35 @@ from sklearn.linear_model import LinearRegression
 import matplotlib.pyplot as plt
 
 
-# X=np.array([[1],[2],[3],[4],[5]])  #independent varaibale
-# y=np.array([2,4,5,4,5]) #dependent varaible
+X=np.array([[1],[2],[3],[4],[5]])  #independent varaibale
+y=np.array([2,4,5,4,5]) #dependent varaible
 
-# #creating model
-# model=LinearRegression()
-
-
-# #tarining the model
-# model.fit(X,y)
+#creating model
+model=LinearRegression()
 
 
-# #predict
-# y_pred=model.predict(X)
-
-# #display results
-# print("Intercept:", model.intercept_)
-# print("Slope:", model.coef_)
-
-# # Plot
-# plt.scatter(X, y, color='blue')
-# plt.plot(X, y_pred, color='red')
-# plt.xlabel("X")
-# plt.ylabel("Y")
-# plt.title("Simple Linear Regression")
-# plt.show()
+#tarining the model
+model.fit(X,y)
 
 
-#example for ordinart least squares:b1 = Σ((Xi - X̄)(Yi - Ȳ)) / Σ((Xi - X̄)²)  ;b0 = Ȳ - b1 * X̄
-#model assumes  y'=b0+b1.X
+#predict
+y_pred=model.predict(X)
+
+#display results
+print("Intercept:", model.intercept_)
+print("Slope:", model.coef_)
+
+# Plot
+plt.scatter(X, y, color='blue')
+plt.plot(X, y_pred, color='red')
+plt.xlabel("X")
+plt.ylabel("Y")
+plt.title("Simple Linear Regression")
+plt.show()
+
+
+# example for ordinary least squares:b1 = Σ((Xi - X̄)(Yi - Ȳ)) / Σ((Xi - X̄)²)  ;b0 = Ȳ - b1 * X̄
+# model assumes  y'=b0+b1.X
 # Sample data
 X = np.array([1, 2, 3, 4, 5])
 Y = np.array([2, 4, 5, 4, 5])
@@ -60,3 +60,7 @@ plt.xlabel('X')
 plt.ylabel('Y')
 plt.legend()
 plt.show()
+
+
+
+#for large data we use gradient descent to find best parameters
